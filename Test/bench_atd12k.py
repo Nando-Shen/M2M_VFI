@@ -35,6 +35,8 @@ if __name__ == '__main__':
     lstDirs = os.listdir(strPath)
 
     for strDir in tqdm.tqdm(lstDirs):
+        if strDir == '.DS_Store':
+            continue
         npyOne = numpy.array(PIL.Image.open(strPath + strDir + '/frame1.png'))[:, :, ::-1].astype(numpy.float32) * (1.0 / 255.0)
         npyTwo = numpy.array(PIL.Image.open(strPath + strDir + '/frame3.png'))[:, :, ::-1].astype(numpy.float32) * (1.0 / 255.0)
         npyTruth = numpy.array(PIL.Image.open(strPath + strDir + '/frame2.png'))[:, :, ::-1].astype(numpy.float32) * (1.0 / 255.0)
