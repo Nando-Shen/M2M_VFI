@@ -21,10 +21,10 @@ torch.backends.cudnn.benchmark = True
 
 netNetwork = m2m.M2M_PWC().cuda().eval()
 
-netNetwork.load_state_dict(torch.load('./model_best.pkl'))
+netNetwork.load_state_dict(torch.load('./model.pkl'))
 
 
-strPath = '/PATH/TO/atd12k/test_2k_540p/'
+strPath = '/atd12k_datasets/test_2k_540p/'
 
 ##########################################################
 
