@@ -24,7 +24,7 @@ netNetwork = m2m.M2M_PWC().cuda().eval()
 netNetwork.load_state_dict(torch.load('./model.pkl'))
 
 
-strPath = '/atd12k_datasets/test_2k_540p/'
+strPath = './atd12k_datasets/test_2k_540p/'
 
 ##########################################################
 
